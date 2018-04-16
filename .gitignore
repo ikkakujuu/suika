@@ -1,0 +1,5 @@
+# Don't include node modules
+node_modules
+
+# Don't include compiled build files
+build
