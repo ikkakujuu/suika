@@ -30,8 +30,7 @@ class Server {
 
 		app.use(indexRouter);
 
-		server.listen(options.port || 0,
-			() => console.log(`Server up and running on http://localhost:${server.address().port}`));
+		server.listen(options.port || 0, () => console.log(`Server up and running on http://localhost:${server.address().port}`));
 	}
 }
 

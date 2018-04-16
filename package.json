@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "description": "A boilerplate repository for Node.js applications with modern web technologies!",
   "scripts": {
-		"dev": "ts-node src",
-		"build": "tsc",
-		"start": "node build"
+    "dev": "ts-node src",
+    "build": "tsc",
+    "start": "node build"
   },
   "keywords": [
     "suika"
