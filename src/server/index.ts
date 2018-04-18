@@ -4,6 +4,11 @@ import express from 'express';
 
 import indexRouter from '../routes/index.route';
 
+export interface IServerContext {
+	app: express.Application;
+	server: http.Server;
+}
+
 interface IServerOptions {
 	port: number;
 }
@@ -17,6 +22,19 @@ class Server {
 		this.app = express();
 		this.server = http.createServer(this.app);
 		this.serverOptions = options || { port: 8080 };
+	}
+
+	public async use(...handlers: Array<(ctx: IServerContext) => void>) {
+		const app = this.app;
+		const server = this.server;
+
+		if (app === null || server === null) {
+			throw new Error('Please set up the server before applying middleware');
+		}
+
+		for (const handler of handlers) {
+			await handler.apply(this, [{ app, server }]);
+		}
 	}
 
 	public async launch() {
