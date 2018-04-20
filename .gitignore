@@ -1,5 +1,8 @@
 # Don't include node modules
 node_modules/
 
+#Don't include package-lock.json
+package-lock.json
+
 # Don't include compiled build files
 build/
