@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A boilerplate repository for Node.js applications with modern web technologies!",
   "scripts": {
-    "dev": "ts-node src",
+    "dev": "ts-node-dev --respawn --transpileOnly src/index.ts",
     "build": "tsc",
     "start": "node build"
   },
@@ -11,7 +11,27 @@
     "suika"
   ],
   "author": "Bruno Scheufler",
-  "license": "MIT",
+	"license": "MIT",
+	"contributors": [
+		{
+			"name": "Bruno Scheufler",
+			"email": "contact@brunoscheufler.com",
+			"url": "https://brunoscheufler.com"
+		},
+		{
+			"name": "Tim Weiß",
+			"email": "tim@weiss.moe",
+			"url": "https://weiss.moe"
+		}
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ikkakujuu/suika.git"
+	},
+	"bugs": {
+		"url": "https://github.com/ikkakujuu/suika/issues"
+	},
+	"homepage": "https://github.com/ikkakujuu/suika",
   "dependencies": {
     "cross-env": "^5.1.4",
     "dotenv": "^5.0.1",
@@ -25,8 +45,8 @@
     "@types/express-jwt": "0.0.40",
     "@types/jsonwebtoken": "^7.2.6",
     "@types/node": "^9.6.5",
-    "ts-node": "^6.0.0",
+    "ts-node-dev": "^1.0.0-pre.25",
     "tslint": "^5.9.1",
     "typescript": "^2.8.1"
-  }
+	}
 }
